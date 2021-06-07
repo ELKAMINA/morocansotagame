@@ -18,7 +18,7 @@ var questionImage = getRandomIndex()
 // Tableau qui contiendra tous les joueurs
 let joueurs = []
 //***** Port d'écoute de notre serveur 
-const port = 2100
+const PORT = process.env.PORT || 5000;
 // gestion de connexion mongoclient . require npm install mongo-client
 const MongoClient = require('mongodb').MongoClient;
 // valeurs a changer : mettre url du client mongo et le nom de la database
@@ -219,6 +219,6 @@ app.post('/inscription',(req,res,next) => {
 })
 
 // ***Connexion au port serveur 
-server.listen(port, function(){
-        console.log(`Vous êtes connecté au serveur sur le port ${port}`)
+server.listen(PORT, function(){
+        console.log(`Vous êtes connecté au serveur sur le port ${PORT}`)
     })
