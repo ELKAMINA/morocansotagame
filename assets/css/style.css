@@ -1,0 +1,159 @@
+
+/* ********* Global ********* */
+/* html {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+} */
+
+
+
+body{
+  background-image:url(/img/prez/background5.jpeg) ;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0.88;
+}
+
+
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+
+
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+/* ********* Index Page ********* */
+.pageEntiere{
+  position: absolute;
+}
+
+#tableauScore{
+  position: absolute;
+  left : 0px;
+
+}
+
+#leaderTab{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+
+}
+
+#rgJeu{
+  position:relative;
+
+  width: auto;
+  height: auto;
+  top : 300px;
+  border: 3px black solid;
+}
+
+#regleDuJeu{
+  font-style: italic;
+}
+
+#temps{
+  font-style: italic;
+  color:mediumblue;
+}
+
+.cartes{
+  width : 70px;
+  height :70px;
+  align-content: space-around;
+  justify-content: space-between;
+}
+
+#carteClassique{
+  display: flex;
+  align-content: space-around;
+  flex-direction: wrap;
+ 
+}
+
+#jeTapeTable{
+  display: flex;
+  align-content: space-around;
+  flex-direction: wrap;
+ 
+ 
+ }
+
+#bjrMr{
+  display: flex;
+  align-content: space-around;
+  flex-direction: wrap;
+ 
+
+}
+
+#bjrMme{
+  display: flex;
+  align-content: space-around;
+  flex-direction: wrap;
+ 
+ 
+}
+
+#revRoi{
+  display: flex;
+  align-content: space-around;
+  flex-direction: wrap;
+ 
+ 
+}
+
+
+
+/* ********* SignIn Page ********* */
+.avatar {
+    width: 100px;
+    border-radius: 50%;
+  }
+  
+
+  .btn{
+      display: flex;
+      left: 0px;
+      background-color: dimgrey;
+      border-color: dimgrey;
+  }
+
+ .avatarServ{
+
+    width: 70px;
+    border-radius: 50%;
+    justify-content: center;
+ }
+
+
+

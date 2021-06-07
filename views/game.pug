@@ -1,0 +1,39 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous')
+  link(rel="stylesheet", href="/css/style.css")
+  title=title 
+// !-- Game
+body
+div.pageEntiere
+
+
+  nav#menu(class="nav nav-pills")
+    a(href='/',class="nav nav-pills") Accueil
+  br
+  br
+  button#commencer(class="btn btn-info") Commencer
+  #entree
+    h1#bienvenue
+    h1#waitingList
+  #divScore
+    h3 Score
+    ul#scoring
+      li
+        | Name : - 
+        img.avatarServ
+    p#count
+  #rejouer
+    h1#gagnant
+
+  form#submission(class="form-inline")
+    img#myPicture(src='' width='400' height='600' alt='cardImage')
+    br
+    br
+    input#reponse(type='text' placeholder='Tapez votre réponse ici')
+    h1#resultat
+script(src='/socket.io/socket.io.js')
+script(src="/js/script.js")

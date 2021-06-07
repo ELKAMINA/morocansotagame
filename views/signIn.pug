@@ -1,0 +1,59 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous')
+  link(rel="stylesheet", href="/css/style.css")
+  title=title
+  body 
+  div.pageEntiere 
+
+        nav(class="nav nav-pills")
+        a(href='/', class="nav nav-pills") Accueil |
+        a.active(href='/signpage', class="nav nav-pills") Game
+        #accueil
+        
+        br
+        br
+        h1#titreP The Morocan Sota is welcoming you
+        p.presentation Veuillez remplir ce formulaire pour accéder au jeu 
+        form(action='/inscription' method='POST' class="form-inline")
+            br
+            label(for='identification') 
+            strong Choisis un pseudo 
+            br
+            input#name(type='text' name='pseudonyme' required='' placeholder='Choisis ton pseudo ici')
+            br
+            br
+            label.all(required='')
+            strong Choisis un avatar :
+            br
+            label.avatars
+                input(type='radio' name='avatar' value='image1')
+                img.avatar(src='./img/avatars/The_death.png' alt='')
+            label.avatars
+                input(type='radio' name='avatar' value='image2')
+                img.avatar(src='./img/avatars/tete.png' alt='')
+            label.avatars
+                input(type='radio' name='avatar' value='image3')
+                img.avatar(src='./img/avatars/smiley.png' alt='')
+            label.avatars
+                input(type='radio' name='avatar' value='image4')
+                img.avatar(src='./img/avatars/laptop.png' alt='')
+            label.avatars
+                input(type='radio' name='avatar' value='image5')
+                img.avatar(src='./img/avatars/guimauve.jpg' alt='')
+            label.avatars
+                input(type='radio' name='avatar' value='image6')
+                img.avatar(src='./img/avatars/eponge.png' alt='')
+            label.avatars
+                input(type='radio' name='avatar' value='image7')
+                img.avatar(src='./img/avatars/bouche.png' alt='')
+            label.avatars
+                input(type='radio' name='avatar' value='image8')
+                img.avatar(src='./img/avatars/babyboss.jpg' alt='')
+            br
+            br
+            button(type='submit', class="btn btn-info") Inscription
+        h3#erreur=Erreur 

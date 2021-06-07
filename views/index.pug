@@ -1,0 +1,74 @@
+doctype html
+html(lang='fr')
+  head
+    meta(charset='UTF-8')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous')
+    link(rel="stylesheet", href="/css/style.css")
+    |
+    title=title
+body
+  div.pageEntiere
+    nav(class="nav nav-pills")
+        a.active(href='/', class="nav nav-pills") Accueil | 
+        br
+        a(href='/signpage', class="nav nav-pills") Game
+        #accueil
+    
+    div#tableauScore
+      br
+      h2(class="jumbotron text-center") LeaderBoard : Quickest players 
+      br 
+      ol
+          each player in leaderBoard
+              li#leaderTab
+                  strong Pseudo : 
+                  span #{player.pseudonyme} 
+                  | a répondu aux : 
+                  span #{player.score} questions en :
+                  span#temps #{player.dureeJeu}
+
+    div#rgJeu
+      h2#hdeux Règles du Jeu
+        p#regleDuJeu Une de ces cartes ci-dessous, va apparaître sur les écrans des joueurs. Chaque groupe de cartes détient une valeur. Le joueur qui saisira le plus rapidement la valeur exacte de la carte gagnera un point. L'objectif est de répondre le premier et le plus rapidement possible aux <strong>16 premières cartes</strong> pour que vous apparaissiez dans le LeaderBoard ci-dessus. Allez Go! 
+
+      
+        div#carteClassique
+        p Pour les cartes suivantes, la valeur exacte est : <strong> Carte Classique </strong> : 
+          img(src='./img/cards/deuxJbaben.jpg' alt='' class="cartes")
+          img(src='./img/cards/deuxOr.jpg' alt='' class="cartes")
+          img(src='./img/cards/quatreSabre.jpg' alt='' class="cartes")
+          img(src='./img/cards/septJbaben.jpg' alt='' class="cartes")
+          img(src='./img/cards/sixBaton.jpg' alt='' class="cartes")
+          img(src="./img/cards/sixSabre.jpg" alt='' class="cartes")
+        |
+        |  
+        div#jeTapeTable
+        p Pour les cartes de type suivantes, la valeur exacte est : <strong>Je tape sur la table</strong> : 
+          img(src="./img/cards/asBaton.jpg" alt='' class="cartes")
+          img(src='./img/cards/asJbaben.jpeg' alt='' class="cartes")
+          img(src='./img/cards/asOr.jpg' alt='' class="cartes")
+          img(src='./img/cards/asSabre.jpg' alt='' class="cartes")
+        |
+        |  
+        div#bjrMr
+        p Pour les cartes de type suivantes, la valeur exacte est : <strong>Bonjour Monsieur</strong>  : 
+          img(src='./img/cards/mrJbaben.jpg' alt='' class="cartes")
+          img(src='./img/cards/mrSabre.jpeg' alt='' class="cartes")
+        |
+        |  
+        div#bjrMme
+        p Pour les cartes de type suivantes, la valeur exacte est : <strong>Bonjour Madame</strong> :  
+          img(src='./img/cards/mmeOr.jpg' alt='' class="cartes")
+          img(src='./img/cards/mmeBaton.jpg' alt='' class="cartes")
+          img(src='./img/cards/mmeJbaben.jpg' alt='' class="cartes")
+        |
+        |  
+        div#revRoi
+        p Pour les cartes de type suivantes, la valeur exacte est : <strong>Carte Classique</strong> : 
+          img(src='./img/cards/roiJbaben.jpg' alt='' class="cartes")
+          img(src="./img/cards/roiOr.jpg" alt='' class="cartes")
